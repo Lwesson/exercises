@@ -1,15 +1,22 @@
+
 /* the styles for the elements */
 * {
 	margin: 0;
 	padding: 0;
 }
+
+.column {
+	column-count: 2;
+}
+
 html {
 	background-color: white;
 }
 body {
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    width: 800px;
+    width: 98%;
+	max-width: 960px;
     margin: 0 auto;
     border: 3px solid #931420;
     background-color: #fffded;
@@ -17,6 +24,12 @@ body {
 a:focus, a:hover {
 	font-style: italic;
 }
+
+a:link{
+	color:#ffffff;
+}
+
+
 /* the styles for the header */
 header {
 	padding: 1.5em 0 2em 0;
@@ -40,31 +53,44 @@ header h3 {
 }
 header img {
 	float: left;
-	padding: 0 30px;
+	padding-left: 1.5625%;
+	padding-right: 1.5625%;
 }
 .shadow {
 	text-shadow: 2px 2px 2px #800000;
 }
+
+
 /* the styles for the navigation menu */
+
+.slicknav_menu {
+    background: #800000 !important;
+    padding: 5px;
+	display: none;
+}
+
 #nav_menu ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	position: relative;
+	display: flex;
 }
 #nav_menu ul li {
 	float: left;
+	width: 100%;
 }
 #nav_menu ul li a {
-    display: block;
-    width: 160px;
+    width: 100%;
     text-align: center;
-    padding: 1em 0;
     text-decoration: none;
     background-color: #800000;
     color: white;
     font-weight: bold;
+	display: block;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
+
 #nav_menu a.current {
 	color: yellow;
 }
@@ -83,13 +109,14 @@ header img {
     content: "";
     clear: both;
     display: block;
+	font-weight: bold;
 }
 
 /* the styles for the section */
 section {
-	width: 525px;
-	float: right;
-	padding: 0 20px 20px 20px;
+	width: 90%;
+	max-width: 1024px;
+	margin: 1em;
 }
 section h1 {
 	font-size: 150%;
@@ -133,13 +160,16 @@ article img {
 	float: right;
 	margin: .5em 0 1em 1em;
 	border: 1px solid black;
+	max-width: 30%;
+	min-width: 150px;
 }
 
 /* the styles for the aside */
+
 aside {
-	width: 215px;
-	float: right;
-	padding: 0 0 20px 20px;
+	width: 34.375%;
+	padding-left: 15px 1.5625%;
+	float: left;
 }
 aside h2 {
 	color: #800000;
@@ -165,4 +195,32 @@ footer p {
 	text-align: center;
 	color: white;
 	padding: 1em 0;
+}
+
+
+@media only screen and (max-width: 500px){
+	header img {
+		float: none;
+	}
+	
+	aside h2 a {
+		font-size: 85%;
+	}
+
+	section h1 {
+		font-size: 125%;
+	}
+
+	aside h2 {
+		font-size: 110%
+	}
+
+	#nav_menu {
+		display:none;
+	}
+
+	.slicknav_menu {
+		display: block;
+	}
+	
 }
