@@ -11,11 +11,12 @@
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="js/jquery.slicknav.min.js"></script>
+	
 	<link rel="stylesheet" href="styles/slicknav.css">
 	
-	<script>
-		$(function(){
-			$('#nav_menu').slicknav('mobile_menu');
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
 		});
 	</script>
 </head>
