@@ -14,12 +14,21 @@ body {
     margin: 0 auto;
     border: 3px solid #931420;
     background-color: #fffded;
+	display: grid;
+	grid-template-rows: repeat(4, auto);
+	grid-template-columns: 100%;
+	grid-template-areas: 
+		"header header header header"
+		"nav_menu nav_menu nav_menu nav_menu"
+		"main main main main"
+		"footer footer footer footer";
 }
 a:focus, a:hover {
 	font-style: italic;
 }
 /* the styles for the header */
 header {
+	grid-area: header;
 	padding: 1.5em 0 2em 0;
 	border-bottom: 3px solid #931420;
 		background-image: -moz-linear-gradient(
@@ -30,7 +39,9 @@ header {
 	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
 	background-image: linear-gradient(
 	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
-}
+	padding-top: 3%;
+	padding-bottom: 3%;
+	}
 header h2 {
 	font-size: 175%;
 	color: #800000;
@@ -46,11 +57,25 @@ header img {
 .shadow {
 	text-shadow: 2px 2px 2px #800000;
 }
+main {
+	grid-area: main;
+	display: grid;
+	grid-template-columns: 30% 67.5%;
+	column-gap: 2.5%;
+	grid-template-areas:
+	"aside section";
+}
 /* the styles for the navigation menu */
 #nav_menu ul {
+	grid-area: nav_menu;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: repeat(5, 20%);
+	grid-template-areas:
+		"nav_items";
 }
 #nav_menu ul li a {
     display: block;
@@ -60,6 +85,7 @@ header img {
     background-color: #800000;
     color: white;
     font-weight: bold;
+	grid-area: nav_items;
 }
 #nav_menu a.current {
 	color: yellow;
@@ -67,7 +93,10 @@ header img {
 
 /* the styles for the section */
 section {
-    padding: 0 2.5% 20px 2.5%;
+    padding: 0 3% 3% 0;
+	grid-row: 1/2;
+	grid-column: 2/3;
+	grid-area: section;
 }
 section h1 {
 	font-size: 150%;
@@ -117,7 +146,11 @@ article img {
 
 /* the styles for the aside */
 aside {
-    padding: 0 0 20px 2.5%;
+    padding: 0 3%;
+	grid-row: 1/2;
+	grid-column: 1/2;
+	grid-area: aside;
+	
 }
 aside h2 {
 	color: #800000;
@@ -134,6 +167,7 @@ aside img {
 
 /* the styles for the footer */
 footer {
+	grid-area: footer; 
 	background-color: #931420;
 }
 footer p {
@@ -159,15 +193,36 @@ footer p {
 
 @media only screen and (max-width: 648px) {
 	header img { float: none; }
-	header { text-align: center; }
+	header { 
+		padding-top: 3%;
+		padding-bottom: 3%;
+		text-align: center; 
+		display: grid;
+		grid-template-rows: repeat(3, auto);
+		grid-template-columns: auto;
+		grid-gap: .5em;
+	}
+	main {
+		display: grid;
+		grid-template-rows: repeat(2, auto);
+		grid-template-columns: 100%;
+	}
 	section {
 		float: none;
 		width: 95%;
+		grid-row: 1/2;
+		grid-column: 1/2;
+		margin-left: 2.5%;
+		margin-right: 2.5%;
 	}
 	aside {
 		float: none;
 		padding-right: 2.5%;
+		padding-left: 2.5%;
 		width: 95%;
+		grid-row: 2/3;
+		grid-column: 1/2;
+
 	}
 	article img { max-width: 30%; }
 	#speakers {
