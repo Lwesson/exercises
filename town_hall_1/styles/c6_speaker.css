@@ -30,9 +30,13 @@ header {
 	background-image: linear-gradient(
 	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
 }
+h1 {
+	color: #cc0000;
+}
 header h2 {
-	font-size: 175%;
-	color: #800000;
+	font-size: 150%;
+	color: #cc0000;
+	padding-bottom: 1em;
 }
 header h3 {
 	font-size: 130%;
@@ -78,8 +82,6 @@ section li {
 /* the styles for the article */
 article {
 	padding: .5em 0;
-	border-top: 2px solid #800000;
-	border-bottom: 2px solid #800000;
 }
 article h2 {
 	padding-top: 0;

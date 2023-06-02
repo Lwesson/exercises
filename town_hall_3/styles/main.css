@@ -17,6 +17,24 @@ body {
 a:focus, a:hover {
 	font-style: italic;
 }
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	padding: .2em .7em;
+	text-align: center;
+}
+
+tr.bordertop {
+	border-top: 2px solid #000000;
+}
+tr.borderbottom {
+	border-bottom: 2px solid #000000;
+}
+
+
 /* the styles for the header */
 header {
 	padding: 1.5em 0 2em 0;
