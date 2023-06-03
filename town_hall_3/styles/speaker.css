@@ -33,6 +33,7 @@ header {
 header h2 {
 	font-size: 175%;
 	color: #800000;
+	font-family: 'Geologica', sans-serif;
 }
 header h3 {
 	font-size: 130%;
@@ -82,6 +83,7 @@ header img {
     display: block;
 }
 /* the styles for the main content */
+
 main {
 	clear: left;
 }
@@ -157,3 +159,19 @@ footer p {
 	color: white;
 	padding: 1em 0;
 }
+
+figure {
+	margin-right: 1.5em;
+	margin-left: 1.5em;
+	float: right;
+}
+
+figcaption {
+	display: block;	
+	font-weight: bold;
+	padding-top: .25em;
+	margin-left: 1em;
+	margin-bottom: 1em;	
+	border-bottom: 1px solid #000000;
+}
+
