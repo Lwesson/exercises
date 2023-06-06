@@ -26,7 +26,9 @@ td {
 	padding: .2em .7em;
 	text-align: center;
 }
-
+th {
+	padding: .2em .7em;
+}
 tr.bordertop {
 	border-top: 2px solid #000000;
 }
@@ -34,6 +36,12 @@ tr.borderbottom {
 	border-bottom: 2px solid #000000;
 }
 
+.left {
+	text-align: left;
+}
+.right {
+	text-align: right;
+}
 
 /* the styles for the header */
 header {
